@@ -158,6 +158,7 @@ function generateSimbols() {
             
             const resultCell = document.createElement("div")
             resultCell.textContent = operationResult
+            resultCell.classList.add("element-display")
             resultadoOp.appendChild(resultCell)
     }
      })
@@ -199,6 +200,7 @@ function addToArr(simbolo) {
      
     const elementoDisplay = document.createElement("div")
     elementoDisplay.textContent = simboloOriginal
+    elementoDisplay.classList.add("element-display")
 
     resultadoOp.appendChild(elementoDisplay)
 
