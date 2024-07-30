@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.ccc-calc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cc-calc {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.grid-elements {
+    display: flex;
+}
+
+.content-numbers {
+    display: flex;
+    flex-direction: column;
+}
+
+.row-num {
+    display: flex
+}
+
+.numero {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+}
+
+.content-operators {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.display {
+    height: 100px;
+    display: flex;
+}
+
+.contenido-display {
+    display: flex;
+}
+
+.element-display {
+
+}
