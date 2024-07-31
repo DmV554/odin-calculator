@@ -67,11 +67,11 @@ function generateNumbers() {
             number.textContent = cont
 
             number.addEventListener("click", (e) => {
-                if(apretoRes) {
+                if(apretoRes && arr.length === 1) {
                     arr = []
                     resultadoOp.replaceChildren()
                     apretoRes = false
-                    
+                    console.log("xds")
                 }
     
                 
@@ -145,9 +145,7 @@ function generateSimbols() {
         oper.textContent = arrOps[i]
 
         oper.addEventListener("click", (e) => {
-
             addToArr(e.target.textContent)
-
             
         })
 
