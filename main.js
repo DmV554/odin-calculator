@@ -49,7 +49,9 @@ function operate(arr) {
 
 
 
+let apretoRes = false
 let arr = []
+
 const resultadoOp = document.querySelector(".contenido-display")
 
 function generateNumbers() {
@@ -65,6 +67,14 @@ function generateNumbers() {
             number.textContent = cont
 
             number.addEventListener("click", (e) => {
+                if(apretoRes) {
+                    arr = []
+                    resultadoOp.replaceChildren()
+                    apretoRes = false
+                    
+                }
+    
+                
                 addToArr(e.target.textContent)
             })
     
@@ -123,7 +133,6 @@ function cleanDisplay() {
 
 
 
-
 function generateSimbols() {
     const operatorsCont = document.querySelector(".content-operators")
 
@@ -136,7 +145,10 @@ function generateSimbols() {
         oper.textContent = arrOps[i]
 
         oper.addEventListener("click", (e) => {
+
             addToArr(e.target.textContent)
+
+            
         })
 
         operatorsCont.appendChild(oper)
@@ -160,6 +172,8 @@ function generateSimbols() {
             resultCell.textContent = operationResult
             resultCell.classList.add("element-display")
             resultadoOp.appendChild(resultCell)
+            apretoRes = true
+
     }
      })
      operatorsCont.appendChild(result)
